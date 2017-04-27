@@ -1,0 +1,54 @@
+<h3 class="text-center">Events</h3>
+
+
+<div class="container">
+  <app-searchbuttons (search)="onSearch()" (newRegister)="onNewRegister()"></app-searchbuttons>
+  <div class="alert alert-warning" role="alert" *ngIf="showNoResultsFound">
+    No result found for the specified criteria
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="searchErrorMessage !== null">
+      {{searchErrorMessage}}
+  </div>
+
+  <hr>
+  <div class="row">
+
+
+    <div class="col-md-12">
+      <h4>Results</h4>
+      <div class="table-responsive">
+
+
+        <table id="mytable" class="table table-bordred table-striped">
+
+          <thead>
+          <tr>
+            <th>Internal Title</th>
+            <th>External Title</th>
+            <th>Show</th>
+            <th class="text-center">Year</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let eventResult of searchResult">
+            <td>{{eventResult.internalTitle}}</td>
+            <td>{{eventResult.externalTitle}}</td>
+            <td>{{eventResult.show.name}}</td>
+            <td class="text-center">{{eventResult.show.editionYear}}</td>
+            <td class="text-center">
+              <button (click)="onEdit(eventResult.id)" class="btn btn-primary btn-xs" title="Edit" ><span class="glyphicon glyphicon-pencil"></span></button>
+              <button (click)="onDelete(eventResult)" class="btn btn-danger btn-xs" title="Delete" data-toggle="modal" data-target="#delete" >
+                <span class="glyphicon glyphicon-trash"></span></button></td>
+          </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<app-deletedialog (confirmDelete)="onConfirmDelete()"></app-deletedialog>

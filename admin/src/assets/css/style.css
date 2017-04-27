@@ -1,0 +1,72 @@
+/* ----------- Personalised Style Air Studies ---------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body{background:url("../images/bgdot.png") repeat #F5F5F5; font-family: Raleway, sans-serif;}
+
+/* - header - */
+#header{padding: 1.5em 0 2em 0}
+.log{
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 12px;
+    /*min-height: 80px;*/
+}
+.log form{
+    font-family: Raleway, sans-serif;
+}
+.log form input{
+    margin-right: 5px;
+}
+.esqsen{
+    display: block;
+    margin-top: 1em;
+}
+.form-control{border: 1px solid #ccc;}
+.r{border-radius: 4px!important}
+
+#header > div > img{cursor: pointer}
+.navbar-default{border: solid 1px #ccc}
+/* - body - */
+
+#brap{
+    width: 50%;
+    margin-bottom: 1em;
+}
+label.br{margin-top: 0.5em;}
+
+label{font-size: 1em; font-weight: 400; color:rgba(0, 0, 0, 0.7)}
+.jumbotron{background-color: #FFF;min-height: 600px; box-shadow: 0px 0px 10px rgba(0,0,0,.1);}
+
+.func h1, h2, h3, h4, h5, h6 {font-family: Raleway, sans-serif; font-weight: 300; color:rgba(27, 117, 188, 10); }
+.func p{font-size: 1.3em}
+.header img{width: auto; margin-top: 5px}
+.header a{font-family: Raleway, sans-serif; font-weight: 300; font-size: 1.1em; float: right}
+.carousel-caption{font-family: Raleway, sans-serif;}
+.carousel-caption p{font-weight: 300}
+.sch ul.schlist{
+    list-style-type: none;
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+.sch ul.schlist li{
+    padding-left: 50px;
+    display: inline;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+.sch ul.schlist li:hover{
+    -webkit-filter: none;
+    filter: none;
+}
+
+/* - footer assign - */
+.a{font-family: 'Raleway', sans-serif;font-size: 1.4em;font-weight: 100;color: rgba(27, 117, 188, 10)}
+.s{font-family: 'Raleway', sans-serif;font-size: 1.05em;font-weight: 600;color: #eca227}
+
+/* - recuperar senha - */
+.usrrec{height: 6em}
+.usrrec > div > span > h5{display: block ;line-height: 2.5em}

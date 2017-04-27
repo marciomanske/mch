@@ -1,0 +1,262 @@
+@import url(../../assets/css/style.css);
+@import url(../../assets/css/bootstrap-select.min.css);
+
+#usr{
+    /*font-family: Raleway, sans-serif;*/
+    font-weight: 200;
+    font-size: 0.9em;
+    line-height: 2em;
+    color: #23527c;
+    margin-top: 15px;
+}
+#usr img{
+    width: 60px;
+}
+#usr button{
+    margin-right: 12px;
+}
+.usrName{
+    margin-right: 1em;
+    line-height: 2em;
+    vertical-align: top;
+}
+.edit{
+    font-size: 1.5em;
+    line-height: 1em;
+}
+.navbar{
+    margin-top: 15px;
+    font-family: Raleway, sans-serif;
+    font-size: 0.85em;
+}
+.form-control{
+    font-size: 0.8em;
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.dropdown-menu{
+    font-size: 0.9em;
+    border-color: rgba(141, 141, 141, 0.20);
+}
+
+.upload-drop-zone {
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
+}
+.upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+}
+nav.navbar.navbar-default{
+    background-color: #eef2f4;
+}
+.prel{
+    position: relative;
+    height: 59px;
+}
+.valign{
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+}
+span.filter-option.pull-left{
+font-size: 0.8em;
+margin-top: 3px;
+}
+button.cadusr{
+    margin: 0 5px 0 5px;
+}
+button.cadusr:nth-last-child(3){
+    margin: 0 0 0 5px;
+}
+
+/* - DADOS - */
+.dados{
+    min-height: 300px;
+}
+input[type=date].form-control{line-height: 22px}
+div.bootstrap-tagsinput{width: 100%}
+span.tag.label.label-info{padding: .5em .6em .6em;}
+.label-info{background-color: #337ab7}
+input#status{
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+}
+.table>tbody>tr>td, .table>tbody>tr>td > p{
+    padding: 3px 8px;
+    vertical-align: middle;
+    margin: 0 0 1px;
+    color: rgb(77, 77, 77);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 0.83em;
+}
+.jumbotron .mytable > tr > td > p{
+    margin-bottom: 0!important;
+    font-size: 1em;
+    font-weight: 200;
+    margin-top: 10px
+}
+.table>thead>tr>th{color:rgba(27, 117, 188, 1);}
+.checkbox+.checkbox, .radio+.radio{margin-top: 10px;}
+div .last{margin-bottom: 2em}
+
+.card{
+    border:1px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0 0 20px 0;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    background-color: rgba(0,0,0, 0.03);
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+}
+.card h4{
+    border-bottom: 1px solid #c7c7c7;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    background-color:#337ab7;
+    color:#FFF;
+}
+.card article{
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+.card article > span{
+    display: block;
+    margin: 20px 10px;
+}
+.cardT{
+    margin-top: 6px;
+}
+input#PerDis.cadEA.radio-inline, input#AbsDis.cadEA.radio-inline,
+input#PerTem.cadEA.radio-inline, input#AbsTem.cadEA.radio-inline,
+input#PerCon.cadEA.radio-inline, input#AbsCon.cadEA.radio-inline {
+    margin: 0px 10px;
+}
+section.card > article.pos{
+    position: relative;
+    margin-top:50px;
+}
+input#mTipoC.form-control, input#mTipoS.form-control, input#hComX.form-control, input#hComR.form-control {width: 18em}
+label.dis, div.dis{margin-top: 20px;}
+.tableCr>tbody>tr{
+    height: 2.5em;
+}
+p.green{
+    font-size: 18px;
+    color: #18aa09;
+}
+/* - - - - - Propriedades - - - - - - - - - */
+
+.group-card {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: #fff;
+}
+
+.node {
+    background: silver;
+    width: 30px;
+    height: 20px;
+    border: 5px solid #fff;
+    cursor: pointer;
+}
+
+.status-0 {
+    background: #ccc;
+}
+.status-1 {
+    background: #5cb85c;
+}
+.status-2 {
+    background: #f0ad4e;
+}
+
+.group-name {
+    min-width: 120px;
+    vertical-align: bottom;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.group-name:hover {
+    background-color: #69c;
+    color: #fff;
+}
+
+.header {
+    font-size: 12px;
+    padding: 6px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.header:hover {
+    background-color: #69c;
+    color: #fff;
+}
+
+.column-header {
+    -moz-transform: rotate(90.0deg);
+    -o-transform: rotate(90.0deg);
+    -webkit-transform: rotate(90.0deg);
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+}
+
+.selected {
+    background: #2b669a;
+    /*border-color: #000;*/
+}
+
+.tq{
+    /*border: 1px solid #c0e1e7;*/
+    border: 2px solid #fff;
+    background-color: #dfefef;
+    padding: 5px 15px 15px;
+}
+div.tq > input[type=checkbox], div.fc > input[type=checkbox]
+{
+    height: 13px;
+    padding: 20px;
+    margin: 10px;
+}
+div.fc > input[type=checkbox]{
+    margin-left: 30px;
+}
+div.fc > input[type=checkbox].first{
+    margin-left: 0px;
+}
+.input-group > .bootstrap-tagsinput{
+    border-radius: 0 4px 4px 0;
+}
+
+p.list-group-item-text {
+  font-size: 12px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

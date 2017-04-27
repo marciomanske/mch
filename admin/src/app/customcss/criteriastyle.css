@@ -1,0 +1,41 @@
+@import url(../../assets/css/style.css);
+
+#usr{
+    /*font-family: Raleway, sans-serif;*/
+    font-weight: 200;
+    font-size: 0.9em;
+    line-height: 2em;
+    color: #23527c;
+    margin-top: 15px;
+}
+#usr img{
+    width: 60px;
+}
+#usr button{
+    margin-right: 12px;
+}
+.usrName{
+    margin-right: 1em;
+    line-height: 2em;
+    vertical-align: top;
+}
+.edit{
+    font-size: 1.5em;
+    line-height: 1em;
+}
+.navbar{
+    margin-top: 15px;
+    font-family: Raleway, sans-serif;
+    font-size: 0.85em;
+}
+.form-control{
+    font-size: 0.8em;
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+.dropdown-menu{
+    font-size: 0.9em;
+    border-color: rgba(141, 141, 141, 0.20);
+}

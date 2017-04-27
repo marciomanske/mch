@@ -1,0 +1,39 @@
+<header id="header" class="container">
+  <div class="col-md-3" onclick="window.location.href='#'"><img src="assets/images/logo.png" alt="Artbasel" title="Artbasel"></div>
+
+  <app-admin-menu></app-admin-menu>
+
+  <section id="usr" class="col-md-3">
+    
+    <p class="col-md-9">
+      <span class="usrName">{{userData.username}}</span>
+      <button type="button" (click)="logoutClick()" class="btn btn-default btn-xs pull-right">Logout</button>
+      <a routerLink="/admin/userregister/{{userData.username}}" routerLinkActive="active"><span class="glyphicon glyphicon-cog edit pull-left" aria-hidden="true" title="Edit"></span></a>
+    </p>
+  </section>
+</header><!-- /header -->
+
+
+<!-- CONTENT
+=================================================== -->
+
+<div class="container">
+
+  
+
+
+  <div class="jumbotron row">
+    
+    <router-outlet></router-outlet>
+
+  </div>
+  <!-- FOOTER -->
+  <footer>
+    <p class="pull-right"><a (click)="backToTop()">Back to top</a></p>
+    <p>&copy; 2017 Artbasel &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+    </p>
+  </footer>
+  
+ 
+
+</div><!-- /.container -->

@@ -1,0 +1,60 @@
+<h3 class="text-center">Event</h3>
+<hr>
+<div class="alert alert-danger" role="alert" *ngIf="registerErrorMessage !== null">
+  {{registerErrorMessage}}
+</div>
+
+<section class="dados col-md-12">
+  <article class="row">
+    <form #eventForm="ngForm">
+
+      <div class="form-group col-md-6">
+        <label for="internalTitle">Internal Title</label>
+        <input type="text" class="form-control" id="internalTitle" placeholder="Internal Title" required
+        name="internalTitle" [(ngModel)]="event.internalTitle" #internalTitle="ngModel"/>
+        <div [hidden]="internalTitle.valid || internalTitle.pristine"
+             class="alert alert-danger">
+          Internal Title is required
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="externalTitle">External Title</label>
+        <input type="text" class="form-control" id="externalTitle" placeholder="External Title" required
+        name="externalTitle" [(ngModel)]="event.externalTitle" #externalTitle="ngModel"/>
+        <div [hidden]="externalTitle.valid || externalTitle.pristine"
+             class="alert alert-danger">
+          External Title is required
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" placeholder="Description" 
+        name="description" [(ngModel)]="event.description" #description="ngModel"/>
+      </div>
+      
+      <div class="form-group col-md-6">
+        <label for="showName">Show</label>
+        <select class="form-control"  id="showName" 
+                [(ngModel)]="selectedShow" name="showName" required #showName="ngModel">
+          <option *ngFor="let show of showList" [value]="show.id">{{show.name}}  {{show.editionYear}}</option>
+        </select>
+        <div [hidden]="showName.valid || showName.pristine"
+             class="alert alert-danger">
+          Show is required
+        </div>
+      </div>      
+      
+
+      
+
+      <div class="col-lg-12">
+        <hr>
+        <app-registerbuttons [validForm]="eventForm.form.valid"
+                             (save)="onSave(true, eventForm)" (saveAndNew)="onSaveAndNew(eventForm)"></app-registerbuttons>
+      </div>
+    </form>
+
+
+  </article>
+</section>

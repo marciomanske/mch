@@ -1,0 +1,84 @@
+<h3 class="text-center">Shows</h3>
+<!--
+<hr>
+
+<form>
+
+  <div class="form-group col-md-4">
+    <label for="showName" class="dis">Name</label>
+    <input type="text" class="form-control" id="showName" placeholder="Show name..."
+           [(ngModel)]="show.name" name="name"
+           #name="ngModel"/>
+  </div>
+
+  <div class="form-group col-md-4">
+    <label for="editionYear" class="dis">Year</label>
+    <input type="number" class="form-control" id="editionYear" placeholder="Edition Year..."
+           [(ngModel)]="show.editionYear" name="editionYear"
+           #name="ngModel"/>
+  </div>
+
+  <div class="form-group col-md-4">
+    <label for="status"  class="dis">Status</label>
+    <select class="form-control"  id="status"
+            [(ngModel)]="show.status" name="status" title={{showStatusList[0].labelSearch}}>
+      <option *ngFor="let status of showStatusList" [value]="status.value">{{status.labelSearch}}</option>
+    </select>
+
+  </div>
+
+
+
+  <app-searchbuttons (search)="onSearch()" (newRegister)="onNewRegister()"></app-searchbuttons>
+
+</form> -->
+
+<div class="container">
+  <app-searchbuttons (search)="onSearch()" (newRegister)="onNewRegister()"></app-searchbuttons>
+  <div class="alert alert-warning" role="alert" *ngIf="showNoResultsFound">
+    No result found for the specified criteria
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="searchErrorMessage !== null">
+      {{searchErrorMessage}}
+  </div>
+
+  <hr>
+  <div class="row">
+
+
+    <div class="col-md-12">
+      <h4>Results</h4>
+      <div class="table-responsive">
+
+
+        <table id="mytable" class="table table-bordred table-striped">
+
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Status</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let showResult of searchResult">
+            <td>{{showResult.name}}</td>
+            <td>{{showResult.editionYear}}</td>
+            <td>{{showResult.status}}</td>
+            <td class="text-center">
+              <button (click)="onEdit(showResult.name, showResult.editionYear)" class="btn btn-primary btn-xs" title="Edit" ><span class="glyphicon glyphicon-pencil"></span></button>
+              <button (click)="onDelete(showResult)" class="btn btn-danger btn-xs" title="Delete" data-toggle="modal" data-target="#delete" >
+                <span class="glyphicon glyphicon-trash"></span></button></td>
+          </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<app-deletedialog (confirmDelete)="onConfirmDelete()"></app-deletedialog>
